@@ -1,0 +1,60 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="ie.cork.mycit.group1.Timetables" >
+
+    <Button
+        android:id="@+id/buttonSubmit"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:text="@string/submit"
+        android:onClick="submit" />
+
+    <Spinner
+        android:id="@+id/spinnerClasses"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewClasses"
+        android:layout_centerHorizontal="true"
+        android:entries="@array/classes"
+        android:spinnerMode="dropdown" />
+
+    <TextView
+        android:id="@+id/textViewClasses"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/spinnerClasses"
+        android:layout_alignStart="@+id/spinnerClasses"
+        android:layout_alignParentTop="true"
+        android:text="@string/class_group"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <TextView
+        android:id="@+id/textViewTimePeriod"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/spinnerClasses"
+        android:layout_alignStart="@+id/spinnerClasses"
+        android:layout_below="@+id/spinnerClasses"
+        android:layout_margin="5dp"
+        android:text="@string/time_period"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <Spinner
+        android:id="@+id/spinnerTime"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textViewTimePeriod"
+        android:layout_alignStart="@+id/textViewTimePeriod"
+        android:layout_below="@+id/textViewTimePeriod"
+        android:entries="@array/time"
+        android:spinnerMode="dropdown" />
+
+</RelativeLayout>
